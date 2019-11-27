@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\US.BOX.Data.Import.Core\US.BOX.Data.Import.Core.csproj" />
+    <ProjectReference Include="..\US.BOX.Data.Import.FileConvertor\US.BOX.Data.Import.FileConvertor.csproj" />
+    <ProjectReference Include="..\US.BOX.Data.Import.ImportDataIntoBOX\US.BOX.Data.Import.ImportDataIntoBOX.csproj" />
+    <ProjectReference Include="..\US.BOX.Data.Import.ImportReceitHandler\US.BOX.Data.Import.ImportReceitHandler.csproj" />
+    <ProjectReference Include="..\US.BOX.Data.Import.USDFUpload\US.BOX.Data.Import.USDFUpload.csproj" />
+  </ItemGroup>
+
+</Project>
