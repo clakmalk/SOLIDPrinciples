@@ -6,7 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\US.BOX.Data.Import.Core\US.BOX.Data.Import.Core.csproj" />
-    <ProjectReference Include="..\US.BOX.Data.Import.DataAccess\US.BOX.Data.Import.DataAccess.csproj" />
+    <ProjectReference Include="..\US.BOX.Data.Import.FileConvertor\US.BOX.Data.Import.FileConvertor.csproj" />
   </ItemGroup>
 
 </Project>

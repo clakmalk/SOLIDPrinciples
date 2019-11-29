@@ -3,19 +3,27 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29409.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "US.BOX.Data.Import", "US.BOX.Data.Import\US.BOX.Data.Import.csproj", "{108AF09D-231B-4512-A8C7-FB80C51BFCE3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "US.BOX.Data.Import", "US.BOX.Data.Import\US.BOX.Data.Import.csproj", "{108AF09D-231B-4512-A8C7-FB80C51BFCE3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "US.BOX.Data.Import.ConsoleApp", "US.BOX.Data.Import.ConsoleApp\US.BOX.Data.Import.ConsoleApp.csproj", "{57E54195-63AB-4C16-96E3-B6B83511FC36}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "US.BOX.Data.Import.ConsoleApp", "US.BOX.Data.Import.ConsoleApp\US.BOX.Data.Import.ConsoleApp.csproj", "{57E54195-63AB-4C16-96E3-B6B83511FC36}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "US.BOX.Data.Import.FileConvertor", "US.BOX.Data.Import.FileConvertor\US.BOX.Data.Import.FileConvertor.csproj", "{010FACD3-A4DF-433B-A74F-A89A72FD39D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "US.BOX.Data.Import.FileConvertor", "US.BOX.Data.Import.FileConvertor\US.BOX.Data.Import.FileConvertor.csproj", "{010FACD3-A4DF-433B-A74F-A89A72FD39D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "US.BOX.Data.Import.Core", "US.BOX.Data.Import.Core\US.BOX.Data.Import.Core.csproj", "{4153A815-7647-44F4-B258-05869D5FB75B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "US.BOX.Data.Import.Core", "US.BOX.Data.Import.Core\US.BOX.Data.Import.Core.csproj", "{4153A815-7647-44F4-B258-05869D5FB75B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "US.BOX.Data.Import.USDFUpload", "US.BOX.Data.Import.USDFUpload\US.BOX.Data.Import.USDFUpload.csproj", "{BB4A210C-2686-4631-B7D0-71073ABDBE0F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "US.BOX.Data.Import.USDFUpload", "US.BOX.Data.Import.USDFUpload\US.BOX.Data.Import.USDFUpload.csproj", "{BB4A210C-2686-4631-B7D0-71073ABDBE0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "US.BOX.Data.Import.ImportDataIntoBOX", "US.BOX.Data.Import.ImportDataIntoBOX\US.BOX.Data.Import.ImportDataIntoBOX.csproj", "{55160BB0-2C1C-4582-A43F-E00493C772E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "US.BOX.Data.Import.ImportDataIntoBOX", "US.BOX.Data.Import.ImportDataIntoBOX\US.BOX.Data.Import.ImportDataIntoBOX.csproj", "{55160BB0-2C1C-4582-A43F-E00493C772E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "US.BOX.Data.Import.ImportReceitHandler", "US.BOX.Data.Import.ImportReceitHandler\US.BOX.Data.Import.ImportReceitHandler.csproj", "{984895FD-6E02-43D8-B375-0560FAF07EEA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "US.BOX.Data.Import.ImportReceitHandler", "US.BOX.Data.Import.ImportReceitHandler\US.BOX.Data.Import.ImportReceitHandler.csproj", "{984895FD-6E02-43D8-B375-0560FAF07EEA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Convertors", "Convertors", "{A58B8F23-30F6-4A34-9C4E-4FE640916F42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "US.BOX.Data.Import.XMLConvertor", "US.BOX.Data.Import.XMLConvertor\US.BOX.Data.Import.XMLConvertor.csproj", "{90D82920-0237-4F5C-8595-0704DD73C8E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "US.BOX.Data.Import.FlatFileConvertor", "US.BOX.Data.Import.FlatFileConvertor\US.BOX.Data.Import.FlatFileConvertor.csproj", "{0CB80E47-76E8-4CAB-AC27-FA7EA9D42BA5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "US.BOX.Data.Import.DataAccess", "US.BOX.Data.Import.DataAccess\US.BOX.Data.Import.DataAccess.csproj", "{89C0C269-536E-45AE-B1DA-C9FA8E588814}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,9 +59,25 @@ Global
 		{984895FD-6E02-43D8-B375-0560FAF07EEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{984895FD-6E02-43D8-B375-0560FAF07EEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{984895FD-6E02-43D8-B375-0560FAF07EEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90D82920-0237-4F5C-8595-0704DD73C8E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90D82920-0237-4F5C-8595-0704DD73C8E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90D82920-0237-4F5C-8595-0704DD73C8E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90D82920-0237-4F5C-8595-0704DD73C8E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CB80E47-76E8-4CAB-AC27-FA7EA9D42BA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CB80E47-76E8-4CAB-AC27-FA7EA9D42BA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CB80E47-76E8-4CAB-AC27-FA7EA9D42BA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CB80E47-76E8-4CAB-AC27-FA7EA9D42BA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89C0C269-536E-45AE-B1DA-C9FA8E588814}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89C0C269-536E-45AE-B1DA-C9FA8E588814}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89C0C269-536E-45AE-B1DA-C9FA8E588814}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89C0C269-536E-45AE-B1DA-C9FA8E588814}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{90D82920-0237-4F5C-8595-0704DD73C8E2} = {A58B8F23-30F6-4A34-9C4E-4FE640916F42}
+		{0CB80E47-76E8-4CAB-AC27-FA7EA9D42BA5} = {A58B8F23-30F6-4A34-9C4E-4FE640916F42}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {86C576A9-5B6D-4168-81CC-34973EA1C726}

@@ -2,20 +2,38 @@
 using System.Collections.Generic;
 using System.Text;
 using US.BOX.Data.Import.Core.Entities;
+using US.BOX.Data.Import.Core.SystemEntities;
 using US.BOX.Data.Import.FileConvertor;
+using US.BOX.Data.Import.FlatFileConvertor;
 using US.BOX.Data.Import.ImportDataIntoBOX;
 using US.BOX.Data.Import.ImportReceitHandler;
 using US.BOX.Data.Import.USDFUpload;
+using US.BOX.Data.Import.XMLConvertor;
 
 namespace US.BOX.Data.Import
 {
     public class Importer
     {
-        public ImportREceipt ImportFile(string file)
+        public ImportREceipt ImportFile(string file, string fileFormat)
         {
             //1. Read the file and Map into USDF Structure
-            Convertor convertor = new Convertor(); 
-            USDFInvoiceInfo invoiceInfo = convertor.Convert(file);
+            USDFInvoiceInfo invoiceInfo = new USDFInvoiceInfo();
+            Convertor convertor;
+            if (fileFormat == "XML")
+            {
+                convertor = new XMLDataConvertor();
+                invoiceInfo = convertor.Convert(file);
+            }else
+            {
+                convertor = new FlatDataFileConvertor();
+                invoiceInfo = convertor.Convert(file);
+            }
+
+            if (convertor is INoteConvtor)
+            {
+                invoiceInfo.Notes = ((INoteConvtor)convertor).GetNotes(file);
+            }
+            
             // 2. Upload the data into USDF Tables
             Uploader uploader = new Uploader();
             int token = uploader.Upload(invoiceInfo);

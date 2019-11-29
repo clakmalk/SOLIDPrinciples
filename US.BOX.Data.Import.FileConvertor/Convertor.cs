@@ -1,24 +1,41 @@
 ﻿using System;
+using System.Collections.Generic;
 using US.BOX.Data.Import.Core.Entities;
 
 namespace US.BOX.Data.Import.FileConvertor
 {
-    public class Convertor
+    public abstract class Convertor
     {
         public USDFInvoiceInfo Convert(string fileName)
         {
-            Console.WriteLine("Converting.....");
+            Console.WriteLine("Converting Flat data.....");
             //Conver here
+            USDFInvoiceInfo invoiceInfo = new USDFInvoiceInfo();
             //First Create USDF Header
+
             //Create List of Claim objects from data
+            invoiceInfo.Cases = GetCases(fileName);
             //List of Transactions
-            //List of Debtors
-            //List Addresses
-            //List of Notes
-            //List of Transactions
-            //List of Notes
+            invoiceInfo.Transactions = GetTransactions(fileName);
+
+            invoiceInfo.Header = CreateHeder(invoiceInfo, fileName);
             Console.WriteLine("Convertion Done");
             return new USDFInvoiceInfo();
+
+
         }
+
+        private USDFHeader CreateHeder(USDFInvoiceInfo invoiceInfo, string fileName)
+        {
+            return new USDFHeader()
+            {
+                MessageId = Guid.NewGuid().ToString(),
+                FileName = fileName
+            };
+        }
+
+        protected abstract List<USDFTransaction> GetTransactions(string fileName);
+
+        protected abstract List<USDFCase> GetCases(string fileName);
     }
 }
